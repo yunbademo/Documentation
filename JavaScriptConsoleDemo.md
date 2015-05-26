@@ -1,4 +1,4 @@
-# JavaScript 控制台 Demo
+﻿# JavaScript 控制台 Demo
 
 ------
 **主要API介绍**
