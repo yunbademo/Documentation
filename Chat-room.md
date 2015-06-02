@@ -156,7 +156,7 @@ http.listen(3000, function(){
 ![此处输入图片的描述][5]
 **一个小型的聊天室就这样通过简单几步就完成了。**
 
-###经过这个小型的聊天应用的创建,相信您对Socket.IO也有了初步的认识了吧。
+经过这个小型的聊天应用的创建,相信您对Socket.IO也有了初步的认识了吧。
 
 
   [1]: https://cloud.githubusercontent.com/assets/12043658/7508521/3f437654-f4b4-11e4-94b9-5da27e555ac0.png
