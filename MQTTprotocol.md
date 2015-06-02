@@ -1,11 +1,10 @@
-﻿# MQTT协议中英文对照
-
+# MQTT协议中英文对照
 ##**Interlinear MQTT protocol： Chinese and English**
 
-| English       | 中文   |  
+| English       | 中文   |
 | --------   | -----:  |
 |  MQTT Control Packet type    | MQTT控制包类型 |
-|  Flags specific to each MQTT Control type       |   不同控制包特有的标识位  |  
+|  Flags specific to each MQTT Control type       |   不同控制包特有的标识位  |
 | Remaining Length        |    剩余长度    |
 |Structure of an MQTT Control Packet|MQTT 控制包结构
 |Publish/Subscribe Model|发布/订阅模式
