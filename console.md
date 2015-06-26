@@ -36,16 +36,16 @@ Socket.IO 是在 WebSocket 基础上开发的一种基于 HTTP 协议的常链�
 ```
 <script type="text/javascript" src="socket.io.js"></script>
 ```
-> * 紧接着引入 Yunba JavaScript SDK
+ 紧接着引入 Yunba JavaScript SDK
 ```
 <script type="text/javascript" src="yunba-1.0.1.js"></script>
 ```
-> * 利用刚刚获得appkey创建 Yunba 实例
+利用刚刚获得appkey创建 Yunba 实例
 ```
 var yunba_demo = new Yunba({
 server: 'sock.yunba.io', port: 3000, appkey: '5535ee987e353f5814e11163'});
 ```
-> * 使用刚刚获得的appkey初始化并连接服务器
+使用刚刚获得的appkey初始化并连接服务器
 完整代码如下(用户只需替换自己的appkey即可)：
 ```
 <script type="text/javascript" src="./socket.io.js"></script>
