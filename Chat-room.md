@@ -128,11 +128,11 @@ http.listen(3000, function(){
  - **监听事件**(监听客户端发送的信息)
  ```socket.on('String',function(data));```
 
-  connect:连接成功
+  ```connect:连接成功```
 
-  connecting:正在连接
+  ```connecting:正在连接```
 
-  disconnect: 断开连接
+  ```disconnect: 断开连接```
 
 
 
@@ -143,9 +143,9 @@ http.listen(3000, function(){
 
 
 
->* 给所有客户端广播消息```io.sockets.emit("msg",{data:"hello, all"});```
+  给所有客户端广播消息```io.sockets.emit("msg",{data:"hello, all"});```
 
->* 给除了自己以外的客户端广播消息
+  给除了自己以外的客户端广播消息
 ```io.sockets.emit("msg",{data:"hello,everyone"});```
 
 ##成果展示
