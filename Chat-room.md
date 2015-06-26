@@ -1,12 +1,18 @@
 # 认识Socket.IO-创建一个小型聊天室
 
-一般来讲,用传统编程语言例如LAMP（Linux+Apache+MySql+PHP）写一个聊天工具有一定的难度，而且不是十分容易上手，这就让很多的初学者望而生畏,从而放弃了开发。然而，在这篇指南中,我们将利用当前最流行的Node.js接合Socket.IO来创建一个简单的聊天工具。最重要的是,它几乎不需要什么专业的编程知识,十分容易上手。
+## 什么是Socket.IO
+Socket.IO是在Websocket基础上开发的一种基于HTTP协议的长连接通讯方式。Socket.IO 实现了实时双向的的基于事件的通讯机制，旨在让各种浏览器与移动设备上实现实时app功能，模糊化各传输机制。
+
+Socket.IO可以做到跨平台，并且可以多种连接方式自动切换，因此做即使通讯的开发十分方便。
+
+一般来讲,用传统编程语言例如LAMP（Linux+Apache+MySql+PHP）写一个聊天工具有一定的难度，而且不是十分容易上手，
+然而，使用Socket.IO 结合Nodejs 可以快速搭建一个简单的聊天工具。
 ##  准备工作
 Node.js 框架Express
 
 在实验开始之前,我们首先要确定我的nodejs以及它的开发框架Express已经成功安装.
 nodejs 在官方网站上下载 https://nodejs.org/
-npm （nodejs packetmanager）,是一个NodeJS包管理和分发工具已经集成在软件中。通过 ```npm install express``` 安装框架Express 
+npm （nodejs packetmanager）,是一个NodeJS包管理和分发工具已经集成在软件中。通过 ```npm install express``` 安装框架Express
 
 安装完成后，可以通过下列指令来进行检验是否成功
 ```
@@ -29,9 +35,9 @@ http.listen(3000, function(){
 });
 ```
 注释:
->* Express初始化一个变量app，使之成为一个功能handler来应用到Http服务器
->* 定义路径handler‘/’用来调用文件或者相应的路径
->* Http服务器侦听服务端口号为3000
+1. Express初始化一个变量app，使之成为一个功能handler来应用到Http服务器
+2. 定义路径handler‘/’用来调用文件或者相应的路径
+3. Http服务器侦听服务端口号为3000
 
 ##客户端index.html
 创建HTML文件，这就是我们简易的聊天窗口
@@ -63,8 +69,8 @@ http.listen(3000, function(){
 
 ##**加入Socket.IO**
 Socket.IO有两部分组成
->* **socket.io** : 一个整合了(部署在)Nodejs HTTP服务器端的socket服务器
->* **socket.io.client**: 一个可以在浏览器端加载的socket客户端库
+ **socket.io** : 一个整合了(部署在)Nodejs HTTP服务器端的socket服务器
+ **socket.io.client**: 一个可以在浏览器端加载的socket客户端库
 
 为此,我们先需要安装socket.io模块
 
@@ -86,7 +92,7 @@ http.listen(3000, function(){
 });
 ```
 **代码说明**
-> io.on('connection',function(socket));**监听客户端的连接,回调函数会传递本次连接的socket**
+io.on('connection',function(socket));**监听客户端的连接,回调函数会传递本次连接的socket**
 
 
 现在,我们需要在index.html中标签</body>之前添加一小段代码用来加载Socket.IO
@@ -122,14 +128,14 @@ http.listen(3000, function(){
  - **监听事件**(监听客户端发送的信息)
  ```socket.on('String',function(data));```
 
- >*  connect:连接成功
- 
- >*  connecting:正在连接
- 
- >*  disconnect: 断开连接
- 
+  connect:连接成功
 
- 
+  connecting:正在连接
+
+  disconnect: 断开连接
+
+
+
 
  - **发送事件**（广播消息）
  ```socket.emit('String',data);```
