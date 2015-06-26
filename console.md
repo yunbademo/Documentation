@@ -73,7 +73,7 @@ server: 'sock.yunba.io', port: 3000, appkey: '5535ee987e353f5814e11163'});
 利用Subscribe（）方法订阅属于自己的频道并且用set_message_cb() 设置收到消息时调用的回调函数来接收消息。
 将下面的代码复制到控制台中如右图所示，确认。你便成功订阅了频道“Yunba”
 ```
-yunba_demo.subscribe({'topic':'yunba'}, 
+yunba_demo.subscribe({'topic':'yunba'},
 function (success, msg) {
   if (success)
     console.log('你已成功订阅频道');
@@ -81,7 +81,7 @@ function (success, msg) {
     console.log(msg);
 });
 yunba_demo.set_message_cb(function (data) {
-  console.log('Topic:' + data.topic + 
+  console.log('Topic:' + data.topic +
 ',Msg:' + data.msg);
 });
 ```
@@ -92,12 +92,12 @@ yunba_demo.set_message_cb(function (data) {
 
 复制下面的代码到控制台中，回车执行指令。得到确认消息“消息发布成功”你便成功地向频道“Yunba”发送了消息“你好！Yunba”
 ```
-yunba_demo.publish({'topic': 'my_topic', 
+yunba_demo.publish({'topic': 'my_topic',
 'msg': '你好！Yunba'},
   function (success, msg) {
     if (success)
       console.log('消息发布成功');
-Else
+else
 console.log(msg);
 });
 ```
@@ -107,13 +107,11 @@ console.log(msg);
 ```
 yunba.unsubscribe({'topic':yunba}, function (success, data) {
   if (success) {
- console.log(‘已成功离开频道’)        
-} 
-else {
+ console.log(‘已成功离开频道’)
+}
+else {s
 alert(data);
 }
 });
 ```
 控制台显示：Object{success：true}已成功离开频道。
-
-
