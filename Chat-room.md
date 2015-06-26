@@ -127,12 +127,15 @@ http.listen(3000, function(){
 
  - **监听事件**(监听客户端发送的信息)
  ```socket.on('String',function(data));```
-
-  ```connect:连接成功```
-
-  ```connecting:正在连接```
-
-  ```disconnect: 断开连接```
+```
+  connect:连接成功
+```
+```
+connecting:正在连接
+```
+  ```
+  disconnect: 断开连接
+  ```
 
 
 
