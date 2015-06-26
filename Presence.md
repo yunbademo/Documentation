@@ -21,17 +21,21 @@
 
 ##**核心APIs**
 
- ```get_state()```**查看在线状态**
+ ```
+ get_state()```**查看在线状态**
+ ```
  函数使用方法：
 ```
 yunba.get_state(alias, function (data) {
 console.log('get state succ');
 ```
 注：alias 为查询用户的别名。 *function(data)*中传递回的参数有 *success*、*data、error_msg*。其中，查询成功 *success* 为 *true* 否则为 *false*，*data* 表示在线状态，*success* 为 *false* 时 *error_msg* 有效。
- - ```get_alias_list( )```**获取所有订阅该频道用户的别名**
+  ```
+  get_alias_list( )```**获取所有订阅该频道用户的别名**
+ ```
  函数使用方法：
 ```
-yunba.get_alias_list(topic, function (success, data) 
+yunba.get_alias_list(topic, function (success, data)
       {
             if (success) {
             var aliasList = "";
@@ -41,9 +45,5 @@ yunba.get_alias_list(topic, function (success, data)
 ```
 注：**topic** 为订阅的频道。***Function(success, data)***传递回的参数有 success、data.alias、error_msg。查询成功 success 为 true 否则为 false，data.alias 为订阅的 alias 列表，类型 List，success 为 true 时有效，success 为 false 时 error_msg 有效。
 
-  
+
 ---
-
-
-
-
