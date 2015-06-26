@@ -12,7 +12,7 @@ Node.js 框架Express
 
 在实验开始之前,我们首先要确定我的nodejs以及它的开发框架Express已经成功安装.
 nodejs 在官方网站上下载 https://nodejs.org/
-npm （nodejs packetmanager）,是一个NodeJS包管理和分发工具已经集成在软件中。通过 ```npm install express``` 安装框架Express
+NPM（nodejs packetmanager）,是一个NodeJS包管理和分发工具已经集成在软件中。通过 ```npm install express``` 安装框架Express
 
 安装完成后，可以通过下列指令来进行检验是否成功
 ```
